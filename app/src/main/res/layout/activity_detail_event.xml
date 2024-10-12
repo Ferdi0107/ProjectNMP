@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WhoWeAreActivity"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/header_drawer"
+        app:menu="@menu/drawer_menu"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/topToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_view2" />
+        <ImageButton
+            android:layout_width="67dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/drawer_icon"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_list_24"/>
+
+        <TextView
+            android:layout_width="162dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/topToolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="123dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="124dp"
+            android:layout_marginBottom="22dp"
+            android:fontFamily="@font/arcade"
+            android:text="GameX"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/topToolbar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="50dp"
+            android:columnCount="1"
+            android:rowCount="3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:id="@+id/imgEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/valorant_crowd" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Regional Qualifier - Valorant"
+                        android:textColor="#333"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Valorant - Team A"
+                        android:textColor="#6b6b6b"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtTglLoc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="Los Angeles, CA (10.00 AM)"
+                        android:textColor="#6b6b6b"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="The Regional Qualifier for Valorant is a tournament where regional teams compete for a spot in major international events. It showcases top-level gameplay, with intense matches testing skill, strategy, and teamwork. Fans can expect exciting plays and the emergence of new talent in the competitive Valorant scene."
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/notifyMeButton"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:background="@drawable/button_like"
+                            android:drawableLeft="@drawable/bell_normal"
+                            android:drawablePadding="8dp"
+                            android:padding="12dp"
+                            android:textAllCaps="false"
+                            android:textColor="#585EE3"
+                            android:textOff="Notify Me"
+                            android:textOn="Notified"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

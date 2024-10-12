@@ -1,0 +1,10 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State saat tombol disabled -->
+    <item android:state_enabled="false" android:color="#585EE3" />
+
+    <!-- State saat tombol ditekan (pressed) -->
+    <item android:state_pressed="true" android:color="@color/white" />
+
+    <!-- State saat tombol dalam kondisi default -->
+    <item android:color="#585EE3" />
+</selector>
